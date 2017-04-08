@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><h1><img src="images/logo.png" alt="" /></h1></a>
+          <a class="navbar-brand" href="index.php"><h1><img src="images/logo.png" alt="" /></h1></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<div class="top-search">
@@ -17,10 +17,7 @@
 					<input type="submit" value=" ">
 				</form>
 			</div>
-			<div class="header-top-right">
-				<div class="file">
-					<a href="upload.html">Upload</a>
-				</div>	
+			<div id="signchange" class="header-top-right">
 				<div class="signin">
 					<a href="#small-dialog2" class="play-icon popup-with-zoom-anim">Sign Up</a>
 					<!-- pop-up-box -->
@@ -179,16 +176,18 @@
 							</div>
 						</div>
 						<div class="signup">
-							<form>
-								<input type="text" class="email" placeholder="Enter email / mobile" required="required" pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?"/>
-								<input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" />
-								<input type="submit"  value="LOGIN"/>
+							<form id="change" method="post" action="signin.php">
+								<input type="text" class="email" placeholder="Enter email" required="required" pattern="([\w-\.]+@([\w-]+\.)" name="username"/>
+								<input type="password" placeholder="Password" required="required" pattern=".{6,}" title="Minimum 6 characters required" autocomplete="off" name="password"/>
+								<input type="submit" value="LOGIN"/>
+
 							</form>
 							<div class="forgot">
 								<a href="#">Forgot password ?</a>
 							</div>
 						</div>
 						<div class="clearfix"> </div>
+								
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -197,3 +196,5 @@
 		<div class="clearfix"> </div>
       </div>
     </nav>
+
+
